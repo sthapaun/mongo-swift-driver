@@ -537,7 +537,7 @@ private class MutableArray: BSONValue {
 
     /// methods required by the BSONValue protocol that we don't actually need/use. MutableArray
     /// is just a BSONValue to simplify usage alongside true BSONValues within the encoder.
-    public static func from(iterator iter: DocumentIterator) -> BSONValue {
+    public static func from(iterator iter: DocumentIterator) -> Self {
         fatalError("`MutableArray` is not meant to be initialized from a `DocumentIterator`")
     }
     func encode(to encoder: Encoder) throws {
@@ -593,7 +593,7 @@ private class MutableDictionary: BSONValue {
 
     /// methods required by the BSONValue protocol that we don't actually need/use. MutableDictionary
     /// is just a BSONValue to simplify usage alongside true BSONValues within the encoder.
-    public static func from(iterator iter: DocumentIterator) -> BSONValue {
+    public static func from(iterator iter: DocumentIterator) -> Self {
         fatalError("`MutableDictionary` is not meant to be initialized from a `DocumentIterator`")
     }
     func encode(to encoder: Encoder) throws {

@@ -375,7 +375,7 @@ extension Document: BSONValue {
         }
     }
 
-    public static func from(iterator iter: DocumentIterator) throws -> BSONValue {
+    public static func from(iterator iter: DocumentIterator) throws -> Document {
         var length: UInt32 = 0
         let document = UnsafeMutablePointer<UnsafePointer<UInt8>?>.allocate(capacity: 1)
         defer {
